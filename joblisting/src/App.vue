@@ -11,6 +11,6 @@
     <NavBar/>
     <Hero/>
     <HomeCards/>
-    <JobsListings/>
+    <JobsListings :limit="3" :showButton="true"/>
   
 </template>
