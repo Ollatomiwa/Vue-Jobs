@@ -2,6 +2,7 @@
   import Joblisting from './Joblisting.vue';
   import { RouterLink } from 'vue-router';
   import { ref, defineProps, onMounted } from 'vue';
+  import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
   import axios from 'axios';
 
   defineProps ({
@@ -17,7 +18,7 @@
 
   onMounted(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/jobs');
+      const response = await axios.get('/api/jobs');
       jobs.value =response.data
     } catch (error) 
     {
@@ -34,6 +35,7 @@
         <h2 class="text-3xl font-bold text-green-500 mb-6 text-center">
           Browse Jobs
         </h2>
+        <!-- Show loading spinner while lading-->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Joblisting v-for="job in jobs.slice(0, limit || jobs.length)":key="jobs.id" :job="job"/>
          </div>
