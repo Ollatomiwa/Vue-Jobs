@@ -85,20 +85,6 @@
         "contactEmail": "gggW@hhh.com",
         "contactPhone": "66666-77777"
       }
-    },
-    {
-      "id": "0b33",
-      "title": "PowerPoint -Excel ",
-      "type": "Full-Time",
-      "location": "Lagos",
-      "description": "Excel database",
-      "salary": "$100K - $125K",
-      "company": {
-        "name": "ComputLife",
-        "description": "Software developer",
-        "contactEmail": "computlifecom@gmail.com",
-        "contactPhone": "23481200066666"
-      }
     }
   ]
 }
