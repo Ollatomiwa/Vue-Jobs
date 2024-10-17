@@ -10,12 +10,11 @@ const form = reactive({
   description: "",
   salary: "",
   location: "",
-  company: {
-    name: "",
-    description: "",
-    contactEmail: "",
-    contactPhone: "",
-  },
+  name: "",
+  descriptions: "",
+  contactEmail: "",
+  contactPhone: "",
+  
 });
 
 const toast = useToast();
@@ -27,12 +26,12 @@ const handleSubmit = async () => {
     location: form.location,
     description: form.description,
     salary: form.salary,
-    company: {
-      name: form.company.name,
-      description: form.company.description,
-      contactEmail: form.company.contactEmail,
-      contactPhone: form.company.contactPhone,
-    },
+    
+      name: form.name,
+      descriptions: form.descriptions,
+      contactEmail: form.contactEmail,
+      contactPhone: form.contactPhone,
+   
   };
 
   try {
@@ -147,7 +146,7 @@ const handleSubmit = async () => {
             >
             <input
               type="text"
-              v-model="form.company.name"
+              v-model="form.name"
               id="company"
               name="company"
               class="border rounded w-full py-2 px-3"
@@ -163,7 +162,7 @@ const handleSubmit = async () => {
             >
             <textarea
               id="company_description"
-              v-model="form.company.description"
+              v-model="form.descriptions"
               name="company_description"
               class="border rounded w-full py-2 px-3"
               rows="4"
@@ -179,7 +178,7 @@ const handleSubmit = async () => {
             >
             <input
               type="email"
-              v-model="form.company.contactEmail"
+              v-model="form.contactEmail"
               id="contact_email"
               name="contact_email"
               class="border rounded w-full py-2 px-3"
@@ -195,7 +194,7 @@ const handleSubmit = async () => {
             >
             <input
               type="tel"
-              v-model="form.company.contactPhone"
+              v-model="form.contactPhone"
               id="contact_phone"
               name="contact_phone"
               class="border rounded w-full py-2 px-3"
@@ -205,7 +204,8 @@ const handleSubmit = async () => {
 
           <div>
             <button
-              class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+              class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full 
+              focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Add Job

@@ -15,12 +15,12 @@ const form = reactive({
   description: "",
   salary: "",
   location: "",
-  company: {
+  
     name: "",
-    description: "",
+    descriptions: "",
     contactEmail: "",
     contactPhone: "",
-  },
+  
 });
 
 const job = ref([]);
@@ -34,12 +34,12 @@ const handleSubmit = async () => {
     location: form.location,
     description: form.description,
     salary: form.salary,
-    company: {
+   
       name: form.company.name,
-      description: form.company.description,
-      contactEmail: form.company.contactEmail,
-      contactPhone: form.company.contactPhone,
-    },
+      descriptions: form.descriptions,
+      contactEmail: form.contactEmail,
+      contactPhone: form.contactPhone,
+    
   };
 
   try {
